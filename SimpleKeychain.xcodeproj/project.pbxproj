@@ -48,6 +48,8 @@
 		5FEEB9E01B7BF72C00501415 /* A0SimpleKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEEB9DD1B7BF72C00501415 /* A0SimpleKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FEEB9E11B7BF72C00501415 /* A0SimpleKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEEB9DE1B7BF72C00501415 /* A0SimpleKeychain.m */; };
 		5FEEB9E21B7BF72C00501415 /* A0SimpleKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEEB9DE1B7BF72C00501415 /* A0SimpleKeychain.m */; };
+		9EE5689CC9B3627190461995E02C448C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4096C3559FA6975D67E4CF68DFA7AC3B /* Nimble.framework */; };
+		C2F48DBFA89BF3E1512A92B597D1395B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A781B6283AC8626F1F89511A867BAB79 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4096C3559FA6975D67E4CF68DFA7AC3B /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/iOS/Nimble.framework; sourceTree = "<group>"; };
 		5B0AB18F2088E2DB002D7109 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5B0D47591EA63C74009FF1BF /* SimpleKeychainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleKeychainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0D47651EA63D17009FF1BF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
@@ -145,6 +148,7 @@
 		5FEEB9D81B7BF71800501415 /* A0SimpleKeychain+KeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "A0SimpleKeychain+KeyPair.m"; sourceTree = "<group>"; };
 		5FEEB9DD1B7BF72C00501415 /* A0SimpleKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A0SimpleKeychain.h; sourceTree = "<group>"; };
 		5FEEB9DE1B7BF72C00501415 /* A0SimpleKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A0SimpleKeychain.m; sourceTree = "<group>"; };
+		A781B6283AC8626F1F89511A867BAB79 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Dependencies/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0D476B1EA63DF9009FF1BF /* SimpleKeychain.framework in Frameworks */,
+				C2F48DBFA89BF3E1512A92B597D1395B /* Quick.framework in Frameworks */,
+				9EE5689CC9B3627190461995E02C448C /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180868254563EDB96B7B8276F1A8BBA4 /* SimpleKeychainApp */ = {
+			isa = PBXGroup;
+			children = (
+				4096C3559FA6975D67E4CF68DFA7AC3B /* Nimble.framework */,
+				A781B6283AC8626F1F89511A867BAB79 /* Quick.framework */,
+			);
+			name = SimpleKeychainApp;
+			sourceTree = "<group>";
+		};
 		5B062A3F1EA63F9E00827E79 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +296,7 @@
 				5F7B45AD1B7D0CE700D5AC89 /* SimpleKeychainApp */,
 				5FEEB99D1B7BD70A00501415 /* Products */,
 				5F51D71D1BCDC4D400613162 /* Frameworks */,
+				75825E61D53635065BAC1372E6AE1AFA /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +352,14 @@
 				5FEEB9AD1B7BD70B00501415 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75825E61D53635065BAC1372E6AE1AFA /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				180868254563EDB96B7B8276F1A8BBA4 /* SimpleKeychainApp */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +509,7 @@
 				5F7B45A81B7D0CE700D5AC89 /* Sources */,
 				5F7B45A91B7D0CE700D5AC89 /* Frameworks */,
 				5F7B45AA1B7D0CE700D5AC89 /* Resources */,
+				820F2C3541E2A742879C0AEC9DB663E7 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -656,6 +681,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		820F2C3541E2A742879C0AEC9DB663E7 /* Accio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Dependencies/iOS/Nimble.framework",
+				"$(SRCROOT)/Dependencies/iOS/Quick.framework",
+			);
+			name = Accio;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B0D47551EA63C74009FF1BF /* Sources */ = {
@@ -1007,6 +1053,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1027,6 +1077,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
 				INFOPLIST_FILE = SimpleKeychainApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.auth0.simplekeychain;
